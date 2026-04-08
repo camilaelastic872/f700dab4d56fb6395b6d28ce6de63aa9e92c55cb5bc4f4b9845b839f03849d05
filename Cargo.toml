@@ -1,0 +1,4 @@
+[package]
+name = "dns_query_ec2861"
+version = "0.0.0"
+edition = "2021"
